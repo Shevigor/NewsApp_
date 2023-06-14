@@ -16,9 +16,24 @@ class ViewModel: ObservableObject {
         guard let url = URL(string: url) else {return}
         let task = URLSession.shared.dataTask(with: url) {data, _, error in
             guard let data = data, error == nil else {return}
-            print("111", data)
+            
+            print("JSON:")
+            print(String(data: data, encoding: .utf8) ?? "-")
+  
             do {
-                let news = try JSONDecoder().decode(NewsApi.self, from: data)
+//++ 1 variant
+//                let decoder = JSONDecoder()
+//                decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
+//                let news = try decoder.decode(NewsApi.self, from: data)
+//-- 1 variant
+                
+//++ 2 variant
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .formatted(formatter)
+                let news = try decoder.decode(NewsApi.self, from: data)
+//-- 2 variant
                 print("Status: ", news.status)
                 print("Total result: ", news.totalResults)
 //                print(news.articles.first ?? "")
@@ -35,4 +50,19 @@ class ViewModel: ObservableObject {
         }
         task.resume()
     }
+}
+
+extension DateFormatter {
+  static let iso8601Full: DateFormatter = {
+    let formatter = DateFormatter()
+//          "publishedAt": "2023-06-09T04:17:42.000Z",
+//    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+
+//                          2023-06-13T14:03:23Z
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    formatter.calendar = Calendar(identifier: .iso8601)
+    formatter.timeZone = TimeZone(secondsFromGMT: 0)
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    return formatter
+  }()
 }
