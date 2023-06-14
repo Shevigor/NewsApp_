@@ -11,6 +11,8 @@
 		CE8B5B9E2A39F3D300596BBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5B9D2A39F3D300596BBC /* ContentView.swift */; };
 		CE8B5BA02A39F3D400596BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8B5B9F2A39F3D400596BBC /* Assets.xcassets */; };
 		CE8B5BA32A39F3D400596BBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8B5BA22A39F3D400596BBC /* Preview Assets.xcassets */; };
+		CE8B5BAA2A39F42E00596BBC /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5BA92A39F42E00596BBC /* ApiCall.swift */; };
+		CE8B5BAC2A39F47D00596BBC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5BAB2A39F47D00596BBC /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CE8B5B9D2A39F3D300596BBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE8B5B9F2A39F3D400596BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8B5BA22A39F3D400596BBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE8B5BA92A39F42E00596BBC /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		CE8B5BAB2A39F47D00596BBC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				CE8B5B9B2A39F3D300596BBC /* NewsApp_App.swift */,
 				CE8B5B9D2A39F3D300596BBC /* ContentView.swift */,
+				CE8B5BA92A39F42E00596BBC /* ApiCall.swift */,
+				CE8B5BAB2A39F47D00596BBC /* DataModel.swift */,
 				CE8B5B9F2A39F3D400596BBC /* Assets.xcassets */,
 				CE8B5BA12A39F3D400596BBC /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8B5B9E2A39F3D300596BBC /* ContentView.swift in Sources */,
+				CE8B5BAC2A39F47D00596BBC /* DataModel.swift in Sources */,
+				CE8B5BAA2A39F42E00596BBC /* ApiCall.swift in Sources */,
 				CE8B5B9C2A39F3D300596BBC /* NewsApp_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
