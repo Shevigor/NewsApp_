@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             List(news){ post in
-                VStack (alignment: .leading, spacing: 5){
+                VStack (alignment: .leading, spacing: 3){
                     Text(post.title).font(.title3).fontWeight(.bold)
                     Text(post.author ?? "").foregroundColor(.red)
 //              Text(news.publishedAt.formatted(.dateTime .month() .day() .year() .hour() .minute()))
