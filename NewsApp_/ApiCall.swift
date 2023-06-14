@@ -30,7 +30,7 @@ class ViewModel: ObservableObject {
                     complition(news.articles)
                 }
             } catch {
-                print("333", error)
+                print("Error decoded JSON -", error)
             }
         }
         task.resume()
