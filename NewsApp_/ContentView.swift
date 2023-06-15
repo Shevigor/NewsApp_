@@ -16,7 +16,7 @@ struct ContentView: View {
                     Text(post.title).font(.title3).fontWeight(.bold)
                     Text(post.author ?? "").foregroundColor(.red)
 //              Text(news.publishedAt.formatted(.dateTime .month() .day() .year() .hour() .minute()))
-                    Text(post.publishedAt.formatted(date: .long, time: .shortened))
+                    Text(post.datePublished.formatted(date: .long, time: .shortened))
                             .foregroundColor(.blue)
                     AsyncImage(url: URL(string: post.urlToImage ?? "")) { Image in
                         Image

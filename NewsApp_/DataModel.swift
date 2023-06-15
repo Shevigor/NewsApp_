@@ -21,12 +21,19 @@ struct Article: Codable, Identifiable {
     let description: String?
     let url: String
     let urlToImage: String?
-    let publishedAt: Date
+    let datePublished: Date
     let content: String
     
     
     enum CodingKeys: String, CodingKey {
-        case source, author, title, description, url, urlToImage, publishedAt, content
+        case source
+        case author = "author"
+        case title
+        case description
+        case url
+        case urlToImage
+        case datePublished = "publishedAt"
+        case content
     }
 }
 
